@@ -30,6 +30,16 @@ body {
     text-decoration: underline;
 }
 
+.navbar{
+    position: sticky;
+    top: 0px;
+}
+
 .content {
     padding: 20px;
+}
+
+.map{
+    width: 50%;
+    display: inline;
 }

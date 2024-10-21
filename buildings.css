@@ -30,6 +30,29 @@ body {
     text-decoration: underline;
 }
 
+.navbar{
+    position: sticky;
+    top: 0px;
+}
+
 .content {
     padding: 20px;
+}
+
+.buildings{
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.buildinglist li a{
+    text-decoration: none;
+    color: black;
+}
+
+.buildinglist li{
+    list-style-type: none;
+}
+
+.buildinglist a:hover{
+    text-decoration: underline;
 }
