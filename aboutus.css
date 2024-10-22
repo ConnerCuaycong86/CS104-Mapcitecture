@@ -38,3 +38,7 @@ body {
 .content {
     padding: 20px;
 }
+
+.name{
+    text-decoration: underline;
+}
