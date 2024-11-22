@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
     <title>Main Page</title>
 </head>
 <body>
@@ -20,7 +27,21 @@
         <p>Explore our site using the navigation bar above</p>
     </div>
     <br>
-    <iframe class="MAP" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6045.632458148597!2d-74.18185942409566!3d40.744069071388715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25482153b5c9d%3A0xfb57c11a957f269c!2sNJIT!5e0!3m2!1sen!2sus!4v1729512987425!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="map"></div>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    var map = L.map('map').setView([40.7448, -74.1738], 16); 
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+   
+</script>
+
     <h1 class="buildings">NJIT Campus Buildings</h1>
 <ul class="buildinglist">
     <li><a href="Buildings/CampusCenter/CampusCenter.html">Campus Center</a></li>
@@ -34,14 +55,5 @@
     <li><a href="buildings/WellnessEventsCenter/WellnessEventsCenter.html">Wellness and Events Center</a></li>
     <li><a href="buildings/ColtonHall/ColtonHall.html">Colton Hall</a></li>
 
-</ul>
-<h1 class="buildings">NJIT Residence Halls</h1>
-<ul class="buildinglist">
-    <li><a href="">Redwood Hall</a></li>
-    <li><a href="">Cypress Hall</a></li>
-    <li><a href="">Oak Hall</a></li>
-    <li><a href="">Laurel Hall</a></li>
-    <li><a href="">Maple Hall</a></li>
-</ul>
 </body>
 </html>
