@@ -32,12 +32,33 @@
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<script>
+<script class="interactive">
     var map = L.map('map').setView([40.7448, -74.1738], 16); 
-
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+
+        const campusMarker = L.marker([40.74309, -74.17839]).addTo(map);
+        campusMarker.bindPopup("<b>Campus Center</b>").openPopup();
+
+        const centralMarker = L.marker([40.74196, -74.17745]).addTo(map);
+        centralMarker.bindPopup("<b>Central King Building</b>").openPopup();
+
+        const coltonMarker = L.marker([40.74142756635255, -74.17798156532417]).addTo(map);
+        coltonMarker.bindPopup("<b>Colton Hall</b>").openPopup();
+
+        const engineeringMarker = L.marker([40.74071418469227, -74.17812993900424]).addTo(map);
+        engineeringMarker.bindPopup("<b>Life Sciences and Engineering Center</b>").openPopup();
+
+        const facultyMarker = L.marker([40.741914110991736, -74.17901338979983]).addTo(map);
+        facultyMarker.bindPopup("<b>Faculty Memorial Hall</b>").openPopup();
+
+        const fentserMarker = L.marker([40.74249938048504, -74.17713584346171]).addTo(map);
+        fentserMarker.bindPopup("<b>Fenster Hall</b>").openPopup();
+
+        const hcadMarker = L.marker([40.74115813028128, -74.17736651346645]).addTo(map);
+        hcadMarker.bindPopup("<b>Hillier College of Achitecture and Design</b>").openPopup();
+
 
    
 </script>
